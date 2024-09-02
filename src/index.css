@@ -1,0 +1,139 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: white;
+  background-color: #030615;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  svg {
+    fill: white;
+    margin-top: auto;
+    transition: opacity 100ms linear;
+  }
+  svg:hover {
+    opacity: .8;
+  }
+}
+#root {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+}
+.main-image-container {
+  display: flex;
+  flex-direction: column;
+  img{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+  }
+}
+footer {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+}
+footer div {
+  flex-grow: 1;
+}
+footer .bg-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, #030615, rgba(255,255,255, 0));
+}
+footer h1 {
+  font-size: 1.4rem;
+  font-weight: 200;
+  opacity: .8;
+}
+footer h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #030615;
+  opacity: .6;
+  z-index: 10;
+}
+.sidebar .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 20%;
+  max-width: 40%;
+  height: 100%;
+  margin-left: auto;
+  padding: 2rem;
+  background-color: #030615;
+  overflow-y: auto;
+  z-index: 15;
+}
+
+.sidebar .title {
+  font-size: 2rem;
+}
+.sidebar .date {
+  font-weight: 200;
+  opacity: .8;
+}
+.sidebar .description-data {
+
+  flex: 1;
+}
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.gear {
+  --size: 4rem;
+  width: var(--size);
+  aspect-ratio: 1;
+  fill: white;
+  opacity: .8;
+  animation: spin 1s linear infinite;
+
+  z-index: 100;
+}
+
+@keyframes spin {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
