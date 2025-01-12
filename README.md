@@ -1,6 +1,6 @@
 # NASA APOD Web App  
 
-![Preview](./preview.jpg)  
+![Preview](./preview.png)  
 
 ## Description  
 
